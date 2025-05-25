@@ -17,7 +17,7 @@ function montaMensagem(atendente, cliente, cnpj, telefone, mensagem) {
     for (let i = 0; i < listaCliente.length; i++) {
         
         let texto = `Olá *${listaCliente[i].trim()},* meu nome é ${atendente}, falo em nome da CNPJ Legal. Tudo bem?\n\nEsse contato é referente ao CNPJ *${converteCnpj(listaCnpj[i])}.*\n\n${mensagem}`
-        textoWtpp += `https://wa.me/${listaTelefones[i]}?text=${converteTexto(texto)}`
+        textoWtpp += `https://wa.me/${listaTelefones[i]}?text=${converteTexto(texto)}\n`
     }
     return textoWtpp
 }
